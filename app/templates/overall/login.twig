@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <base href="{{config.build.url}}"/>
+        <meta charset="utf-8"/>
+        <meta content="noindex" name="robots"/>
+        <meta content="max-age=0" http-equiv="cache-control"/>
+        <meta content="no-cache" http-equiv="cache-control"/>
+        <meta content="0" http-equiv="expires"/>
+        <meta content="Tue, 01 Jan 1980 1:00:00 GMT" http-equiv="expires"/>
+        <meta content="no-cache" http-equiv="pragma"/>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <title>
+            Entrar | {{config.build.name}} {{config.build.version_html}}
+        </title>
+        <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport"/>
+        <meta content="#ffffff" name="theme-color"/>
+        <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700" rel="stylesheet"/>
+        <link href="assets/css/vendor.min.css" rel="stylesheet"/>
+        <link href="assets/css/elephant.min.css" rel="stylesheet"/>
+        <link href="assets/css/login-1.min.css" rel="stylesheet"/>
+    </head>
+</html>
+<body>
+    <div class="login">
+        <div class="login-body">
+            <a class="login-brand" href="#">
+                <img class="img-responsive" src="assets/img/logo-hm.svg"/>
+            </a>
+            <h3 class="login-heading">
+                {{config.build.name}}
+                {{config.build.version|raw}}
+            </h3>
+            <div class="login-form">
+                <form id="login_form">
+                    <div class="alert hide" id="ajax_login">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="username">
+                            Usuario
+                        </label>
+                        <input autocomplete="off" autofocus="true" class="form-control" id="username" name="user" placeholder="Usuario" required="" type="text">
+                        </input>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="password">
+                            Contraseña
+                        </label>
+                        <input class="form-control" id="password" minlength="6" name="pass" placeholder="Contraseña" required="" type="password">
+                        </input>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" id="login">
+                            Entrar
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <ul class="list-inline">
+                            <li>
+                                <label class="custom-control custom-control-primary custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox">
+                                        <span class="custom-control-indicator">
+                                        </span>
+                                        <span class="custom-control-label">
+                                            Mantenerme conectado
+                                        </span>
+                                    </input>
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="password-1.html">
+                                    ¿Olvidaste tu nombre de usuario?
+                                </a>
+                            </li>
+                            <li>
+                                <a href="password-1.html">
+                                    ¿Olvidaste tu contraseña?
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="login-footer">
+            <ul class="list-inline">
+                <li>
+                    <a class="link-muted" href="{{config.build.url}}registrarse">
+                        Registrarse
+                    </a>
+                </li>
+                <li>
+                    |
+                </li>
+                <li>
+                    Dirección de TI
+                </li>
+                <li>
+                    |
+                </li>
+                <li>
+                    {{config.build.copyright}} {{ "now"|date("Y") }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var urlhome = '{{config.build.url}}';
+    </script>
+    <script src="assets/js/vendor.min.js">
+    </script>
+    <script src="assets/js/elephant.min.js">
+    </script>
+    <script src="assets/js/login/login.js">
+    </script>
+</body>

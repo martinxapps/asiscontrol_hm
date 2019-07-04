@@ -1,0 +1,72 @@
+# This file is part of the Ocrend Framewok 3 package.
+#
+# (c) Ocrend Software <info@ocrend.com>
+#
+# For the full copyright and license information, please view the LICENS
+# file that was distributed with this source code.
+
+# Configuración de la base de datos
+database:
+  default_driver: mysql
+  drivers:
+    mysql: 
+      host: localhost
+      user: admin_asis
+      pass: 1501128480
+      name: admin_asis
+      port: default
+      socket: default
+    sqlite3:
+      file: '___ROOT___Ocrend/Kernel/Database/Drivers/Sqlite/db.sqlite3'
+      
+# Configuración de servidor SMTP
+mailer:
+  host: 
+  user: 
+  pass: 
+  port: 587
+  logo:
+
+# Configuración de twig
+twig:
+  cache: false
+  compiled_dir: false # ./app/templates/.compiled/
+  charset: UTF-8
+  strict_variables: false
+  autoescape: html
+  
+# Configuración del sitio
+build:
+  production: true
+  name: ASiS Control
+  name_html: ASiS Control
+  version_html: Version Beta v1.0
+  url: //asiscontrol.hm.med.ec/
+  timezone: America/Guayaquil
+  version: '<t style="font-size: x-small;">Beta v1.0</t>'
+  copyright: © Hospital Metropolitano
+
+# Configuración de cookies
+sessions:
+  lifetime: 13600
+  user_cookie:
+    enable: true
+    key_encrypt: X8f3p@9Vde0WvKauzI8C_asiscontrol.hm.med.ec
+    lifetime: 13600
+
+# Configuración de la api
+api:
+  active: true
+  origin: '*'
+
+# Configuración de ruta
+router:
+  ssl: true
+  path: asiscontrol.hm.med.ec/
+
+# Seguridad
+security:
+  access_control: true
+  modules:
+    habitaciones:
+      rol: ['Administrador',Gestionador']

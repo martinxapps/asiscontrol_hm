@@ -1,0 +1,50 @@
+<template id="btn-opc">
+    <div class="btn-group dropup">
+        <button aria-expanded="false" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" type="button">
+            Opciones
+            <span class="caret">
+            </span>
+            <span class="sr-only">
+                Toggle Dropdown
+            </span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li>
+                <a href="#">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon icon-user-plus icon-lg icon-fw">
+                            </span>
+                        </div>
+                        <div class="media-body">
+                            <span class="d-b">
+                                Paciente
+                            </span>
+                            <small>
+                                Información del paciente.
+                            </small>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="{{config.build.url}}">
+                    <div class="media">
+                        <div class="media-left">
+                            <span class="icon icon-link icon-lg icon-fw">
+                            </span>
+                        </div>
+                        <div class="media-body">
+                            <span class="d-b">
+                                Iniciar App
+                            </span>
+                            <small>
+                                Iniciar Sesión.
+                            </small>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</template>
